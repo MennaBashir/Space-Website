@@ -1,0 +1,391 @@
+:root{
+    --color:hsl(231, 77%, 90%);
+    
+}
+*{
+     --webkit-box-sizing:border-box;
+    --moz-box-sizing:border-box;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Forum', serif;
+    overflow: hidden;
+}
+/* Navbar */
+.container
+{
+    background-image: url('images/home/background-home-desktop.jpg');
+    background-size: cover;
+    height: 100vh;
+    width: 145%;
+    position: relative;
+    animation: zoomInOut 25s linear infinite forwards;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+header .img{
+    margin: 60px;
+    cursor: pointer;
+}
+header .UL{
+    background-color: #171b4670;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    padding-right: 150px;
+    padding-top: 2px;
+    mix-blend-mode: hard-light;
+    margin-right: 30%;
+}
+header ul{
+    display: flex;
+    gap: 25px;
+}
+header ul li a{
+    color:#f5f5f5d4;
+    text-decoration: none;
+    letter-spacing:2px;
+}
+.UL ul li .active,
+.Min-ul li .active{
+    border-bottom: 3px solid whitesmoke;
+    padding-bottom: 32px;
+    border-radius: 2px;
+    color: whitesmoke;
+}
+
+ul .active{
+    padding-bottom: 10px;
+}
+.Min-ul li .active{
+    padding-bottom: 6px;
+    color: whitesmoke
+}
+header ul li a span{
+    color: whitesmoke;
+    padding-right: 3px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+@keyframes zoomInOut{
+    0% {
+        background-size: 100%;
+    }
+    50% {
+        background-size: 120%;
+    }
+    100% {
+        background-size: 100%;
+    }
+}
+/* End Navbar */
+/* Start Home */
+main{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+main section{
+    width: 450px;
+    font-family: 'Forum';
+    margin-top: 140px;
+    margin-left: 140px;
+}
+section > p{
+    font-size: 24px;
+    color: var(--color);
+    letter-spacing: 4px;
+}
+section h1{
+    font-size: 160px;
+    letter-spacing: 10px;
+    font-family: 'Forum';
+    color:white;
+    margin-top: 20px;
+    margin-bottom: 47px;
+}
+section h1 + p{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height:  25px;
+}
+aside div{
+    position: relative;
+    font-family: 'Forum';
+    animation: spin 20s linear infinite;
+    background-image: url('images/home/image.jpg');
+    background-size: cover;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    margin-top: 300px;
+}
+aside div:hover{
+    box-shadow: 0 0 140px 0px blue;
+}
+@keyframes spin{
+
+    100%{
+        /* 750px represnt width image */
+        background-position: -750px 0;
+    }
+}
+aside{
+    margin-right: 43%; 
+}
+aside a{
+    text-decoration: none;
+    color: black
+}
+aside div::before{
+    content: "EXPLORE";
+    position: absolute;
+    color: white;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 43px;
+    letter-spacing: 3px; 
+}
+@keyframes move{
+        0% {
+            transform: translate(0) scale(1);
+        }
+        15% {
+            transform: translate(40%) scale(.5);
+        }
+        30% {
+            transform: translateY(-15%) scale(.25);
+        }
+     
+}
+/* Start planet */
+.contain .Min-ul{
+    top: 260px;
+    position: fixed;
+    right: 300px;
+}
+.contain .Min-ul ul{
+    display: flex;
+    gap: 30px;
+}
+.contain > p{
+    color: #f5f5f5f0;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-left: 25px;
+    margin-top: 5px;
+}
+
+.contain > p span{
+    color: hsl(231deg 23% 34%);
+    font-size: 28px;
+    font-weight: bold;
+}
+.Min-ul ul li a{
+    color: var(--color);
+    letter-spacing: 2px;
+}
+.planet{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.planet .imge img{
+    width: 200px;
+    animation: move 18s linear infinite;
+    margin-left: 160px;
+    margin-top: 100px;
+}
+.planet .info{
+    max-width: 400px;
+    position: fixed;
+    right: 200px;
+    bottom: 130px;
+    color: white;
+}
+.info h1{
+    font-size: 80px;
+    letter-spacing: 4px;
+}
+.info h1 + p{
+    width: 400px;
+    letter-spacing: 1px;
+    line-height: 22px;
+    color: var(--color);
+    margin-top: -20px;
+    border-bottom: 2px solid hsl(231deg 12% 20%);
+    padding-bottom: 60px;
+    
+}
+.info .num {
+   
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+}
+.info .num p{
+    color: whitesmoke;
+    font-size: 23px;
+    letter-spacing: 2px;
+}
+.info .num p span{
+    display: block;
+    color: var(--color);
+    font-size: 13px;
+    padding-bottom: 8px;
+    letter-spacing: 3px;
+}
+@keyframes move{
+    0% {
+        transform: translate(0) scale(1);
+    }
+    15% {
+        transform: translate(40%) scale(.5);
+    }
+    30% {
+        transform: translateY(-15%) scale(.25);
+    }
+    45% {
+        transform: translate(-40%) scale(.5);
+    }
+    60% {
+        transform: translate(0) scale(1.2);
+    }
+    85% {
+        transform: translate(0) scale(1);
+    }
+    100% {
+        transform: translate(0) scale(1);
+    }
+}
+/* End Planet */
+/* Start Crew */
+.people{
+    margin-left: 120px;
+}
+.people > p,
+.techno > p{
+    color: whitesmoke;
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-left: 30px;
+    font-family: system-ui;
+}
+.people > p span,
+.techno > p span{
+    color: #4c505b;
+    font-weight: 500;
+}
+.people ul {
+    display: flex;
+    position: fixed;
+    bottom: 120px;
+}
+.people ul li a{
+    width: 15px;
+    height: 15px;
+    background-color:#30323a;
+    margin-right: 30px;
+    border-radius: 50%;
+    display: block
+}
+
+.people ul li .active{
+background-color: white
+}
+.person{
+    display: flex;
+
+}
+.person .desc {
+    max-width: 500px;
+    margin-left: 20px;
+    margin-top: 60px;
+}
+.person .desc > p{
+    color: #7a7d86;
+    font-size: 30px;
+    margin-bottom: 45px;
+    letter-spacing: 3px;
+}
+.person .desc h1{
+    color: white;
+    font-size: 52px;
+    letter-spacing: 5px;
+    margin-top: -25px;
+    font-weight: 400;
+}
+.person .desc h1 + p{
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: hsl(231deg 77% 90% / 89%);
+}
+/* end crew */
+/* Start Techno */
+.techno ul{
+    position: fixed;
+    bottom: 240px;
+    left: 39px;
+}
+.techno ul li a{
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    border: 2px solid hsl(231deg 77% 90% / 12%);
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+.techno ul li .active{
+    background-color: white;
+    color: black;
+}
+.vechil{
+    display: flex;
+
+}
+.vechil .desc2{
+    max-width: 500px;
+    margin-left: 200px;
+    margin-top: 60px;
+}
+.vechil .desc2 > p{
+    margin-bottom: 45px;
+    letter-spacing: 3px;
+    color: hsl(231deg 77% 90% / 89%);
+}
+.desc2 h1{
+    color: white;
+    font-size: 52px;
+    letter-spacing: 5px;
+    margin-top: -25px;
+    font-weight: 400;
+}
+.desc2 h1 + p{
+    letter-spacing: 2px !important;
+    font-size: 19px;
+    line-height: 28px;
+}
+.vechil .imge{
+    position: fixed;
+    right: 0px;
+}
+
+/* End techno */
